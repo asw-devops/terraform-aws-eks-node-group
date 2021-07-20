@@ -296,3 +296,9 @@ variable "metadata_http_tokens" {
   type        = string
   description = "Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Can be optional or required"
 }
+
+variable "additional_security_group_ids" {
+  type        = list(string)
+  default     = []
+  description = "Set of EC2 Security Group IDs to be attached to the worker nodes. "
+}
